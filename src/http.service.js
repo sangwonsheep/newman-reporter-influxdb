@@ -103,9 +103,6 @@ class HttpService {
   }
 
   disconnect() {
-    if(this.context.version == 2) {
-      this.signOut();
-    }
   }
 };
 
