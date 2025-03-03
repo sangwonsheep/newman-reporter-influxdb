@@ -39,6 +39,7 @@ class InfluxDBReporter {
     this.context.org = this.reporterOptions.influxdbOrg || this.reporterOptions.org;
     this.context.name = this.reporterOptions.influxdbName || this.reporterOptions.name;
     this.context.measurement = this.reporterOptions.influxdbMeasurement || this.reporterOptions.measurement;
+    this.context.token = this.reporterOptions.influxdbToken || this.reporterOptions.token;
     this.context.username = this.reporterOptions.influxdbUsername || this.reporterOptions.username;
     this.context.password = this.reporterOptions.influxdbPassword || this.reporterOptions.password;
     this.context.mode = this.reporterOptions.influxdbMode || this.reporterOptions.mode || 'http';

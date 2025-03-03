@@ -12,19 +12,23 @@ class HttpService {
       baseURL: `${this.context.mode === "https" ? "https" : "http"}://${this.context.server}:${this.context.port}`
     };
 
-    if(this.context.version == 2) {
-      // For InfluxDB version 2.x
-      axiosOptions.auth = {
-        username: this.context.username,
-        password: this.context.password,
+    if (this.context.version == 2) {
+      if (this.context.token) {
+        // 토큰이 제공된 경우, Basic Auth 대신 Authorization 헤더 사용
+        axiosOptions.headers = {
+          'Authorization': `Token ${this.context.token}`
+        };
+      } else {
+        // 토큰이 없는 경우 기존 방식 (username/password) 사용
+        axiosOptions.auth = {
+          username: this.context.username,
+          password: this.context.password,
+        };
+        this.signIn();
       }
     }
 
     this.client = axios.create(axiosOptions);
-
-    if(this.context.version == 2) {
-      this.signIn();
-    }
   }
 
   _buildInfluxDBUrl(path='write') {
