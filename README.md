@@ -83,7 +83,7 @@ newman run https://www.getpostman.com/collections/631643-f695cab7-6878-eb55-7943
 `--reporter-influxdb-port` | Port no. (Usually `8086`)
 `--reporter-influxdb-version` | InfluxDB Version `1`, `2` (default `1`)
 `--reporter-influxdb-org` | InfluxDB Org (For InfluxDB version 2.x)
-`--reporter-influxdb-port` | Port no. (Usually `8086`)
+`--reporter-influxdb-token` | InfluxDB API Token (For InfluxDB version 2.x)
 `--reporter-influxdb-name` | Database name (or Bucket name for InfluxDB version 2.x)
 `--reporter-influxdb-measurement` | Measurement Point name (If not provided, then reporter will create measurement with prefix `newman_results-<timestamp>`)
 `--reporter-influxdb-username` (*Optional*) | Username created for InfluxDB (e.g. `newman_user`)
