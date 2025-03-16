@@ -32,7 +32,7 @@ newman run <collection-url> -r influxdb \
 Example:
 
 ```
-# For InfluxDB version 2.x
+# For InfluxDB version 2.x (아래 코드는 2.7 기준)
 
 # Node 설치
 - name: Set up Node
