@@ -4,7 +4,7 @@ https://github.com/vs4vijay/newman-reporter-influxdb
 
 해당 라이브러리에서 `InfluxDB 2.x 버전의 token 인증 방식을 지원하지 않습니다.`   
 token 인증 방식 지원을 위해 직접 코드를 수정하여 `InfluxDB 2.x 버전의 token 방식을 추가`하였습니다.   
-`Newman`의 결과를 `InfluxDB`에 저장 후 `Grafana를` 이용해 시각화하고자 합니다.
+`Newman`의 결과를 `InfluxDB`에 저장 후 `Grafana를` 이용해 시각화하기 위해 사용합니다.
 
 ## Getting Started
 
